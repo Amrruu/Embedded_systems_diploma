@@ -1,0 +1,376 @@
+
+Unit6_lesson4.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  0000024e  2**0
+                  ALLOC, LOAD, DATA
+  1 .text         000000ac  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      0000002f  00000000  00000000  0000024e  2**0
+                  CONTENTS, READONLY
+  3 .stack.descriptors.hdr 0000000e  00000000  00000000  0000027d  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000058  00000000  00000000  0000028b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000ee2  00000000  00000000  000002e3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000ab3  00000000  00000000  000011c5  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   0000035f  00000000  00000000  00001c78  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  000000d0  00000000  00000000  00001fd8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    0000039f  00000000  00000000  000020a8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    000001b3  00000000  00000000  00002447  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000048  00000000  00000000  000025fa  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .text         00000004  000001cc  000001cc  00000240  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 13 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00002644  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .text.INIT_MCUCR 0000000c  000001b6  000001b6  0000022a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 15 .text.INIT_MCUCSR 0000000a  000001c2  000001c2  00000236  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 16 .text.INIT_GICR 00000020  0000016c  0000016c  000001e0  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 17 .text.INIT_DDRD 00000014  000001a2  000001a2  00000216  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 18 .text.main    0000002a  00000142  00000142  000001b6  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 19 .text.__vector_1 00000032  000000ac  000000ac  00000120  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 20 .text.__vector_2 00000032  000000de  000000de  00000152  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 21 .text.__vector_3 00000032  00000110  00000110  00000184  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 22 .text.__dummy_fini 00000002  000001d4  000001d4  00000248  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 23 .text.__dummy_funcs_on_exit 00000002  000001d6  000001d6  0000024a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 24 .text.__dummy_simulator_exit 00000002  000001d8  000001d8  0000024c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 25 .text.exit    00000016  0000018c  0000018c  00000200  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 26 .text._Exit   00000004  000001d0  000001d0  00000244  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 4a 00 	jmp	0x94	; 0x94 <__ctors_end>
+   4:	0c 94 56 00 	jmp	0xac	; 0xac <_etext>
+   8:	0c 94 6f 00 	jmp	0xde	; 0xde <__vector_2>
+   c:	0c 94 88 00 	jmp	0x110	; 0x110 <__vector_3>
+  10:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+  14:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+  18:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+  1c:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+  20:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+  24:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+  28:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+  2c:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+  30:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+  34:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+  38:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+  3c:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+  40:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+  44:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+  48:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+  4c:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+  50:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+  54:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+  58:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+  5c:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+  60:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+  64:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+  68:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+  6c:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+  70:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+  74:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+  78:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+  7c:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+  80:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+  84:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+  88:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+  8c:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+  90:	0c 94 e6 00 	jmp	0x1cc	; 0x1cc <__bad_interrupt>
+
+00000094 <__ctors_end>:
+  94:	11 24       	eor	r1, r1
+  96:	1f be       	out	0x3f, r1	; 63
+  98:	cf ef       	ldi	r28, 0xFF	; 255
+  9a:	d0 e1       	ldi	r29, 0x10	; 16
+  9c:	de bf       	out	0x3e, r29	; 62
+  9e:	cd bf       	out	0x3d, r28	; 61
+  a0:	0e 94 a1 00 	call	0x142	; 0x142 <main>
+  a4:	0c 94 c6 00 	jmp	0x18c	; 0x18c <exit>
+
+000000a8 <_exit>:
+  a8:	f8 94       	cli
+
+000000aa <__stop_program>:
+  aa:	ff cf       	rjmp	.-2      	; 0xaa <__stop_program>
+
+Disassembly of section .text:
+
+000001cc <__bad_interrupt>:
+ 1cc:	0c 94 00 00 	jmp	0	; 0x0 <__TEXT_REGION_ORIGIN__>
+
+Disassembly of section .text.INIT_MCUCR:
+
+000001b6 <INIT_MCUCR>:
+#define INT_MCUCR *(volatile unsigned int*)(IO_BASE + 0x35)
+#define INT_GICR *(volatile unsigned int*)(IO_BASE + 0x3B)
+#define INT_MCUCSR *(volatile unsigned int*)(IO_BASE + 0x34)
+
+void INIT_MCUCR(){
+	INT_MCUCR |= (0b1101 << 0);
+ 1b6:	85 b7       	in	r24, 0x35	; 53
+ 1b8:	96 b7       	in	r25, 0x36	; 54
+ 1ba:	8d 60       	ori	r24, 0x0D	; 13
+ 1bc:	96 bf       	out	0x36, r25	; 54
+ 1be:	85 bf       	out	0x35, r24	; 53
+ 1c0:	08 95       	ret
+
+Disassembly of section .text.INIT_MCUCSR:
+
+000001c2 <INIT_MCUCSR>:
+}
+
+void INIT_MCUCSR(){
+	INT_MCUCSR |= (0<<6);
+ 1c2:	84 b7       	in	r24, 0x34	; 52
+ 1c4:	95 b7       	in	r25, 0x35	; 53
+ 1c6:	95 bf       	out	0x35, r25	; 53
+ 1c8:	84 bf       	out	0x34, r24	; 52
+ 1ca:	08 95       	ret
+
+Disassembly of section .text.INIT_GICR:
+
+0000016c <INIT_GICR>:
+}
+void INIT_GICR(){
+	INT_GICR |= (1<<5);
+ 16c:	8b b7       	in	r24, 0x3b	; 59
+ 16e:	9c b7       	in	r25, 0x3c	; 60
+ 170:	80 62       	ori	r24, 0x20	; 32
+ 172:	9c bf       	out	0x3c, r25	; 60
+ 174:	8b bf       	out	0x3b, r24	; 59
+	INT_GICR |= (1<<6);
+ 176:	8b b7       	in	r24, 0x3b	; 59
+ 178:	9c b7       	in	r25, 0x3c	; 60
+ 17a:	80 64       	ori	r24, 0x40	; 64
+ 17c:	9c bf       	out	0x3c, r25	; 60
+ 17e:	8b bf       	out	0x3b, r24	; 59
+	INT_GICR |= (1<<7);
+ 180:	8b b7       	in	r24, 0x3b	; 59
+ 182:	9c b7       	in	r25, 0x3c	; 60
+ 184:	80 68       	ori	r24, 0x80	; 128
+ 186:	9c bf       	out	0x3c, r25	; 60
+ 188:	8b bf       	out	0x3b, r24	; 59
+ 18a:	08 95       	ret
+
+Disassembly of section .text.INIT_DDRD:
+
+000001a2 <INIT_DDRD>:
+}
+
+void INIT_DDRD(){
+	DDRD |= (1<<5);
+ 1a2:	8a b1       	in	r24, 0x0a	; 10
+ 1a4:	80 62       	ori	r24, 0x20	; 32
+ 1a6:	8a b9       	out	0x0a, r24	; 10
+	DDRD |= (1<<6);
+ 1a8:	8a b1       	in	r24, 0x0a	; 10
+ 1aa:	80 64       	ori	r24, 0x40	; 64
+ 1ac:	8a b9       	out	0x0a, r24	; 10
+	DDRD |= (1<<7);
+ 1ae:	8a b1       	in	r24, 0x0a	; 10
+ 1b0:	80 68       	ori	r24, 0x80	; 128
+ 1b2:	8a b9       	out	0x0a, r24	; 10
+ 1b4:	08 95       	ret
+
+Disassembly of section .text.main:
+
+00000142 <main>:
+
+
+
+int main(void)
+{
+INIT_MCUCR();	
+ 142:	0e 94 db 00 	call	0x1b6	; 0x1b6 <INIT_MCUCR>
+INIT_MCUCSR();
+ 146:	0e 94 e1 00 	call	0x1c2	; 0x1c2 <INIT_MCUCSR>
+INIT_GICR();
+ 14a:	0e 94 b6 00 	call	0x16c	; 0x16c <INIT_GICR>
+INIT_DDRD();
+ 14e:	0e 94 d1 00 	call	0x1a2	; 0x1a2 <INIT_DDRD>
+    while(1)
+    {
+		IO_PORTD |= (0<<5);
+ 152:	82 b3       	in	r24, 0x12	; 18
+ 154:	93 b3       	in	r25, 0x13	; 19
+ 156:	93 bb       	out	0x13, r25	; 19
+ 158:	82 bb       	out	0x12, r24	; 18
+		IO_PORTD |= (0<<6);
+ 15a:	82 b3       	in	r24, 0x12	; 18
+ 15c:	93 b3       	in	r25, 0x13	; 19
+ 15e:	93 bb       	out	0x13, r25	; 19
+ 160:	82 bb       	out	0x12, r24	; 18
+		IO_PORTD |= (0<<7);
+ 162:	82 b3       	in	r24, 0x12	; 18
+ 164:	93 b3       	in	r25, 0x13	; 19
+ 166:	93 bb       	out	0x13, r25	; 19
+ 168:	82 bb       	out	0x12, r24	; 18
+ 16a:	f3 cf       	rjmp	.-26     	; 0x152 <main+0x10>
+
+Disassembly of section .text.__vector_1:
+
+000000ac <__vector_1>:
+	 }
+}
+
+
+ISR(INT0_vect)
+{
+  ac:	1f 92       	push	r1
+  ae:	0f 92       	push	r0
+  b0:	0f b6       	in	r0, 0x3f	; 63
+  b2:	0f 92       	push	r0
+  b4:	11 24       	eor	r1, r1
+  b6:	8f 93       	push	r24
+  b8:	9f 93       	push	r25
+		IO_PORTD |= (1<<5);
+  ba:	82 b3       	in	r24, 0x12	; 18
+  bc:	93 b3       	in	r25, 0x13	; 19
+  be:	80 62       	ori	r24, 0x20	; 32
+  c0:	93 bb       	out	0x13, r25	; 19
+  c2:	82 bb       	out	0x12, r24	; 18
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  c4:	87 ea       	ldi	r24, 0xA7	; 167
+  c6:	91 e6       	ldi	r25, 0x61	; 97
+  c8:	01 97       	sbiw	r24, 0x01	; 1
+  ca:	f1 f7       	brne	.-4      	; 0xc8 <__vector_1+0x1c>
+  cc:	00 c0       	rjmp	.+0      	; 0xce <__vector_1+0x22>
+  ce:	00 00       	nop
+		_delay_ms(100);
+}
+  d0:	9f 91       	pop	r25
+  d2:	8f 91       	pop	r24
+  d4:	0f 90       	pop	r0
+  d6:	0f be       	out	0x3f, r0	; 63
+  d8:	0f 90       	pop	r0
+  da:	1f 90       	pop	r1
+  dc:	18 95       	reti
+
+Disassembly of section .text.__vector_2:
+
+000000de <__vector_2>:
+
+
+ISR(INT1_vect)
+{
+  de:	1f 92       	push	r1
+  e0:	0f 92       	push	r0
+  e2:	0f b6       	in	r0, 0x3f	; 63
+  e4:	0f 92       	push	r0
+  e6:	11 24       	eor	r1, r1
+  e8:	8f 93       	push	r24
+  ea:	9f 93       	push	r25
+	IO_PORTD |= (1<<6);
+  ec:	82 b3       	in	r24, 0x12	; 18
+  ee:	93 b3       	in	r25, 0x13	; 19
+  f0:	80 64       	ori	r24, 0x40	; 64
+  f2:	93 bb       	out	0x13, r25	; 19
+  f4:	82 bb       	out	0x12, r24	; 18
+  f6:	87 ea       	ldi	r24, 0xA7	; 167
+  f8:	91 e6       	ldi	r25, 0x61	; 97
+  fa:	01 97       	sbiw	r24, 0x01	; 1
+  fc:	f1 f7       	brne	.-4      	; 0xfa <__vector_2+0x1c>
+  fe:	00 c0       	rjmp	.+0      	; 0x100 <__vector_2+0x22>
+ 100:	00 00       	nop
+	_delay_ms(100);
+}
+ 102:	9f 91       	pop	r25
+ 104:	8f 91       	pop	r24
+ 106:	0f 90       	pop	r0
+ 108:	0f be       	out	0x3f, r0	; 63
+ 10a:	0f 90       	pop	r0
+ 10c:	1f 90       	pop	r1
+ 10e:	18 95       	reti
+
+Disassembly of section .text.__vector_3:
+
+00000110 <__vector_3>:
+
+ISR(INT2_vect)
+{
+ 110:	1f 92       	push	r1
+ 112:	0f 92       	push	r0
+ 114:	0f b6       	in	r0, 0x3f	; 63
+ 116:	0f 92       	push	r0
+ 118:	11 24       	eor	r1, r1
+ 11a:	8f 93       	push	r24
+ 11c:	9f 93       	push	r25
+	IO_PORTD |= (1<<7);
+ 11e:	82 b3       	in	r24, 0x12	; 18
+ 120:	93 b3       	in	r25, 0x13	; 19
+ 122:	80 68       	ori	r24, 0x80	; 128
+ 124:	93 bb       	out	0x13, r25	; 19
+ 126:	82 bb       	out	0x12, r24	; 18
+ 128:	87 ea       	ldi	r24, 0xA7	; 167
+ 12a:	91 e6       	ldi	r25, 0x61	; 97
+ 12c:	01 97       	sbiw	r24, 0x01	; 1
+ 12e:	f1 f7       	brne	.-4      	; 0x12c <__vector_3+0x1c>
+ 130:	00 c0       	rjmp	.+0      	; 0x132 <__vector_3+0x22>
+ 132:	00 00       	nop
+	_delay_ms(100);
+}
+ 134:	9f 91       	pop	r25
+ 136:	8f 91       	pop	r24
+ 138:	0f 90       	pop	r0
+ 13a:	0f be       	out	0x3f, r0	; 63
+ 13c:	0f 90       	pop	r0
+ 13e:	1f 90       	pop	r1
+ 140:	18 95       	reti
+
+Disassembly of section .text.__dummy_fini:
+
+000001d4 <_fini>:
+ 1d4:	08 95       	ret
+
+Disassembly of section .text.__dummy_funcs_on_exit:
+
+000001d6 <__funcs_on_exit>:
+ 1d6:	08 95       	ret
+
+Disassembly of section .text.__dummy_simulator_exit:
+
+000001d8 <__simulator_exit>:
+ 1d8:	08 95       	ret
+
+Disassembly of section .text.exit:
+
+0000018c <exit>:
+ 18c:	ec 01       	movw	r28, r24
+ 18e:	0e 94 eb 00 	call	0x1d6	; 0x1d6 <__funcs_on_exit>
+ 192:	0e 94 ea 00 	call	0x1d4	; 0x1d4 <_fini>
+ 196:	ce 01       	movw	r24, r28
+ 198:	0e 94 ec 00 	call	0x1d8	; 0x1d8 <__simulator_exit>
+ 19c:	ce 01       	movw	r24, r28
+ 19e:	0e 94 e8 00 	call	0x1d0	; 0x1d0 <_Exit>
+
+Disassembly of section .text._Exit:
+
+000001d0 <_Exit>:
+ 1d0:	0e 94 54 00 	call	0xa8	; 0xa8 <_exit>
